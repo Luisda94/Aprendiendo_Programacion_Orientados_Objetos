@@ -30,5 +30,9 @@ System.out.println("");
     	System.out.println(celular1);
 
     	System.out.println(celular2);
+//aqui probamos como los objetos de un mismo tipo les funciona el mismo metodo es decir el mismo comportamiento     	
+    	celular1.encenderLinterna();
+    	celular2.encenderLinterna();
+
     }
 }
