@@ -1,5 +1,7 @@
 package Principal;
 
+import Aprendiendo_POO.TelefonoMovil;
+
 public class main {
 	//creacion de instancia(objeto ) a partir de la clase ''Aprendiendo_POO" que deberai llamarse modelo, 
 	//Es decir creamos el objeto
