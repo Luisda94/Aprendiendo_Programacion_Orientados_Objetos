@@ -16,7 +16,11 @@ public class main {
     	
     	//crearemos otro objeto nuevo
     	TelefonoMovil celular2 = new TelefonoMovil("Motorola","G54",3,"negro");
-    //	
+    //	ahora vamos a llamar a los metodos craedos en el modelo
+    	String contacto= "hermano";
+    	celular1.llamar(contacto);
+    	celular1.encenderLinterna();
+
     	
     	
     //ahora vamos a probar el metodo set para modificar en este caso el modelo del telefono
