@@ -15,15 +15,16 @@ public class main {
     	System.out.println(celular1.getMarca());//get nos permite acceder al metodo
     	
     	//crearemos otro objeto nuevo
-    	TelefonoMovil celular2 = new TelefonoMvoil("Motorola,G54",3,"negro");
+    	TelefonoMovil celular2 = new TelefonoMovil("Motorola","G54",3,"negro");
     //	
     	
     	
     //ahora vamos a probar el metodo set para modificar en este caso el modelo del telefono
     	celular1.setModelo("modelo N95");
     	System.out.println("mostramos la marca del celular creado :" + celular1.getModelo());
+System.out.println("");
+    	System.out.println(celular1);
 
-    	
-    	
+    	System.out.println(celular2);
     }
 }
