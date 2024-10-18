@@ -50,7 +50,19 @@ public class TelefonoMovil {
 	public void setColor(String color) {
 		this.color = color;
 	}
-//ahora sobreescribmos el metodo para poder mostrar los atributos
+	
+	//crearemos dos metodos nuevos encender linterna tipo void(sin retorno d evalor) y segundo metodo sera llamar.
+	public void encenderLinterna() {
+		System.out.println("linterna encendida ");
+	}	
+		//segundo metodo llamar donde se agrega el parametro contacto
+		public void llamar(String contacto) {
+	System.out.println("Llamando a "+ contacto);		
+		}
+	
+	
+	
+//ahora sobreescribmos el metodo para poder mostrar los atributos cada vez que se llame el objeto o modifque en la calse main
 	@Override
 	public String toString() {
 		return "TelefonoMovil [marca=" + marca + ", modelo=" + modelo + ", numeroCamara=" + numeroCamara + ", color="
