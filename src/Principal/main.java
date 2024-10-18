@@ -15,8 +15,8 @@ public class main {
     	System.out.println(celular1.getMarca());//get nos permite acceder al metodo
     
     //ahora vamos a probar el metodo set para modificar en este caso el modelo del telefono
-    	celular1.setModelo("modelo original unico de Chile a prueba de terremotos");
-    	System.out.println("mostramos la marca del celular creado" + celular1.getModelo());
+    	celular1.setModelo("modelo N95");
+    	System.out.println("mostramos la marca del celular creado :" + celular1.getModelo());
     
     }
 }
