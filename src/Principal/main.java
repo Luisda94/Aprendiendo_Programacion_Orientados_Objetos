@@ -12,6 +12,6 @@ public class main {
     	
     	//Ahora vamos a crear instanciar un nuevo objeto 
     	TelefonoMovil celular1 = new TelefonoMovil("Nokia","N23",2, "azul");
-    	
+    	System.out.println(celular1.getMarca());
     }
 }
