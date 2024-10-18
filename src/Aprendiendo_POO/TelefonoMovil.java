@@ -2,6 +2,7 @@ package Aprendiendo_POO;
 
 //el package Aprendiendo_POO(Programacion Orientada a Objetos) funciona como una clase modelo
 
+//le colocamos un nombre bien descriptivo
 public class TelefonoMovil {
 	
 	
