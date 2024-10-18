@@ -13,5 +13,10 @@ public class main {
     	//Ahora vamos a crear instanciar un nuevo objeto 
     	TelefonoMovil celular1 = new TelefonoMovil("Nokia","N23",2, "azul");
     	System.out.println(celular1.getMarca());//get nos permite acceder al metodo
+    
+    //ahora vamos a probar el metodo set para modificar en este caso el modelo del telefono
+    	celular1.setModelo("modelo original unico de Chile a prueba de terremotos");
+    	System.out.println("mostramos la marca del celular creado" + celular1.getModelo());
+    
     }
 }
