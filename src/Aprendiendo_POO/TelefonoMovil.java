@@ -1,7 +1,9 @@
 package Aprendiendo_POO;
 
+//el package Aprendiendo_POO(Programacion Orientada a Objetos) funciona como una clase modelo
+
 public class TelefonoMovil {
-	//deberia de estar en un paquete modelo 
+	
 	
 	//justa abajo estamos declarando los atributos
 		private String marca; 
