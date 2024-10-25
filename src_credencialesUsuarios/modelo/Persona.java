@@ -32,6 +32,24 @@ public class Persona {
     public String getFechaNacimiento() {
         return fechaNacimiento;
     }
+    ///Para validar que la contraseña tenga al menos 2 letras mayusculas y 3 caracteres que pueden ser numeros o simbolos hare lo siguiente:
+    public boolean validarContrasenia() {
+    	int contadorMayusculas = 0;
+    	int contadorDeSimbolosNumeros =0;
+    	
+    	for (char caracter : contrasena.toCharArray()){
+    		//Aqui verifico si el caracter es Mayusculas
+    		if (Character.isUpperCase(caracter)) {
+    			contadorMayusculas++;
+    		} //Ahora verifico Contador numerico y simbolico.
+    		else if (Character.isDigit(caracter) || !Character.isLetter(caracter)) {
+    			contadorDeSimbolosNumeros++;
+    		} 
+    	}
+		return contadorMayusculas >1 && contadorDeSimbolosNumeros >=3;
+    	
+    }
+    
 	//metodo para saber si es mayor de edad. //se hace boolean por o verdad o mentira. se coloca la condicion verdadera. >=a 18
     // Método para saber si es mayor de edad
     public boolean esMayor() {
