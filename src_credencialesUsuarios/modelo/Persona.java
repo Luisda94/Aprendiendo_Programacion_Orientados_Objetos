@@ -37,26 +37,12 @@ public class Persona {
 	//metodo para saber si es mayor de edad. //se hace boolean por o verdad o mentira. se coloca la condicion verdadera. >=a 18
     // Método para saber si es mayor de edad
     public boolean esMayor() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate fechaNacimientoLocalDate;
-
-        try {
-            // Convertimos la fecha de nacimiento a LocalDate
-            fechaNacimientoLocalDate = LocalDate.parse(fechaNacimiento, formatter);
-        } catch (DateTimeParseException e) {
-            System.out.println("Formato de fecha inválido. Asegúrate de usar el formato DD/MM/YYYY.");
-            return false; // O lanzar una excepción según prefieras
-        }
-
-        LocalDate fechaActual = LocalDate.now(); // Fecha actual
-        int edad = fechaActual.getYear() - fechaNacimientoLocalDate.getYear();
-
-        // Ajustar la edad si el cumpleaños no ha ocurrido aún este año
-        if (fechaActual.getDayOfYear() < fechaNacimientoLocalDate.getDayOfYear()) {
-            edad--;
-        }
-
+        // Suponiendo que fechaNacimiento es un String con formato "DD-MM-YYYY"
+        String[] partes = fechaNacimiento.split("-"); // Dividir la fecha
+        int anioNacimiento = Integer.parseInt(partes[2]); // Obtener el año
+        int edad = 2024 - anioNacimiento; // Cambia 2024 al año actual si es necesario
         return edad >= 18;
+
     }
 }
 

@@ -14,27 +14,27 @@ public class RegistroUsuarios {
 //se hace arrelgo para agregar usuarios se aplica Arraylist
         List<Persona> usuarios = new ArrayList<>();
 
-        while (usuarios.size() < 10) {
+        while (true) {
             System.out.println("Ingrese su nuevo nombre de usuario:");
             String nombreUsuario = scanner.nextLine();
 
-            System.out.println("Ingrese su contraseña:");
-            String contrasena = scanner.nextLine();
-            
-            // Validar si la contraseña es débil
-            if (contrasena.length() < 10) {
-                System.out.println("La contraseña es débil. Debe tener más de 10 caracteres. Inténtalo de nuevo.");
-            } else {
-                break; // Salir del ciclo si la contraseña es válida
-            }
+            String contrasena; // Declarar la variable fuera del ciclo
+            while (true) {
+                System.out.println("Ingrese su contraseña (debe tener más de 10 caracteres):");
+                contrasena = scanner.nextLine();
 
-            // Validaciones de la contrasena (puedes incluir tu método aquí)
-            // if (!validarContrasena(contrasena)) { ... }
+                // Validar si la contraseña es débil
+                if (contrasena.length() < 10) {
+                    System.out.println("La contraseña es débil. Debe tener más de 10 caracteres. Inténtalo de nuevo.");
+                } else {
+                    break; // Salir del ciclo si la contraseña es válida
+                }
+            }
 
             System.out.println("Ingrese su nombre completo:");
             String nombreCompleto = scanner.nextLine();
 
-            System.out.println("Ingrese su fecha de nacimiento (YYYY):");
+            System.out.println("Ingrese su fecha de nacimiento (DD-MM-YYYY):");
             String fechaNacimiento = scanner.nextLine();
 
             // Crear un nuevo objeto Persona
@@ -56,8 +56,15 @@ public class RegistroUsuarios {
             for (Persona usuario : usuarios) {
                 System.out.println(usuario.getNombreCompleto());
             }
-        }
+            // Para salir del ciclo principal, puedes añadir una condición
+            // Por ejemplo, si la lista de usuarios tiene 10 elementos
+            if (usuarios.size() >= 10) {
+                System.out.println("Se ha alcanzado el límite de usuarios registrados.");
+                break; // Salir del ciclo principal
+            }
         
+        
+        }
         scanner.close();
     }
 	
