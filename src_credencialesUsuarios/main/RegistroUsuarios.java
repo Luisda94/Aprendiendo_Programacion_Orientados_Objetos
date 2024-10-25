@@ -53,7 +53,7 @@ public class RegistroUsuarios {
             // Mostrar lista de usuarios registrados
             System.out.println("Lista de Usuarios registrados:");
             for (int i = 0; i < usuarios.size(); i++) {
-    	            System.out.printf(usuarios.get(i).getNombreUsuario()+"/n");
+                System.out.printf("%d- %s\n", i + 1, usuarios.get(i).getNombreUsuario());
     	        }
          
             // Para salir del ciclo principal, puedes añadir una condición
