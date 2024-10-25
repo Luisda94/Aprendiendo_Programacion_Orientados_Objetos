@@ -20,7 +20,7 @@ public class RegistroUsuarios {
 
             String contrasena; // Declarar la variable fuera del ciclo
             while (true) {
-                System.out.println("Ingrese su contraseña (debe tener más de 10 caracteres):");
+                System.out.println("Ingrese su contraseña: ");
                 contrasena = scanner.nextLine();
 
                 // Validar si la contraseña es débil
@@ -42,20 +42,20 @@ public class RegistroUsuarios {
             
             // Evaluar si es mayor o menor de edad
             if (nuevoUsuario.esMayor()) {
-                System.out.println("El usuario es mayor de edad.");
+                System.out.println("Bienvenido."+nombreUsuario + "\n Puedes entrar ");
             } else {
-                System.out.println("El usuario es menor de edad.");
+                System.out.println("Aun eres muy joven.");
             }
 
             // Agregar el nuevo usuario a la lista
             usuarios.add(nuevoUsuario);
-            System.out.println("Usuario registrado exitosamente!");
 
             // Mostrar lista de usuarios registrados
-            System.out.println("Usuarios registrados:");
-            for (Persona usuario : usuarios) {
-                System.out.println(usuario.getNombreCompleto());
-            }
+            System.out.println("Lista de Usuarios registrados:");
+            for (int i = 0; i < usuarios.size(); i++) {
+    	            System.out.printf(usuarios.get(i).getNombreUsuario()+"/n");
+    	        }
+         
             // Para salir del ciclo principal, puedes añadir una condición
             // Por ejemplo, si la lista de usuarios tiene 10 elementos
             if (usuarios.size() >= 10) {
@@ -65,8 +65,9 @@ public class RegistroUsuarios {
         
         
         }
-        scanner.close();
-    }
-	
 
+        scanner.close();
+    
+	
+        }
 }
