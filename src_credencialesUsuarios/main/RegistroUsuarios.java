@@ -18,16 +18,16 @@ public class RegistroUsuarios {
             System.out.println("Ingrese su nuevo nombre de usuario:");
             String nombreUsuario = scanner.nextLine();
 
+            
             String contrasena; // Declarar la variable fuera del ciclo
             while (true) {
                 System.out.println("Ingrese su contraseña: ");
                 contrasena = scanner.nextLine();
 
-                // Validar si la contraseña es débil
-                if (contrasena.length() < 10) {
-                    System.out.println("La contraseña es débil. Debe tener más de 10 caracteres. \n Inténtalo de nuevo.");
-                } else {
-                    break; // Salir del ciclo si la contraseña es válida
+                // Validar la contraseña utilizando el método de la clase Persona
+                if (!new Persona(nombreUsuario, contrasena, "", "").validarContrasenia(contrasena)) {
+                    System.out.println("La contraseña es débil. Debe tener más de 10 caracteres y cumplir con los requisitos. \n Inténtalo de nuevo.");
+                } else {   break; // Salir del ciclo si la contraseña es válida
                 }
             }
 

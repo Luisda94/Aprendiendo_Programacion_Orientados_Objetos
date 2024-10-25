@@ -61,7 +61,8 @@ public class Persona {
     // Método para saber si es mayor de edad
     public boolean esMayor() {
         // Suponiendo que fechaNacimiento es un String con formato "DD-MM-YYYY"
-        String[] partes = fechaNacimiento.split("-"); // Dividir la fecha
+       
+    	String[] partes = fechaNacimiento.split("-"); // Dividir la fecha
         int anioNacimiento = Integer.parseInt(partes[2]); // Obtener el año
         int anioActual = Year.now().getValue(); // Obtener el año actual
         int edad = anioActual - anioNacimiento;
