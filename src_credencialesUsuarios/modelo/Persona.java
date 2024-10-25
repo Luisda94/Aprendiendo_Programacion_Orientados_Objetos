@@ -1,8 +1,6 @@
 package modelo;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
+import java.time.Year;
 
 public class Persona {
     private String nombreUsuario;
@@ -40,7 +38,8 @@ public class Persona {
         // Suponiendo que fechaNacimiento es un String con formato "DD-MM-YYYY"
         String[] partes = fechaNacimiento.split("-"); // Dividir la fecha
         int anioNacimiento = Integer.parseInt(partes[2]); // Obtener el año
-        int edad = 2024 - anioNacimiento; // Cambia 2024 al año actual si es necesario
+        int anioActual = Year.now().getValue(); // Obtener el año actual
+        int edad = anioActual - anioNacimiento;
         return edad >= 18;
 
     }
