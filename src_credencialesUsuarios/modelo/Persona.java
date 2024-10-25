@@ -11,11 +11,15 @@ public class Persona {
     // Constructor
     public Persona(String nombreUsuario, String contrasena, String nombreCompleto, String fechaNacimiento) {
         this.nombreUsuario = nombreUsuario;
-        this.contrasena = contrasena;
+
         this.nombreCompleto = nombreCompleto;
         this.fechaNacimiento = fechaNacimiento;//formado que piden es DD/MM/AAAA
+    
+    if(!validarContrasenia(contrasena)) {
+    	throw new IllegalArgumentException("La contraseña es debil");
     }
-
+    	this.contrasena = contrasena;
+    }
     // Getters
     public String getNombreUsuario() {
         return nombreUsuario;
@@ -33,7 +37,10 @@ public class Persona {
         return fechaNacimiento;
     }
     ///Para validar que la contraseña tenga al menos 2 letras mayusculas y 3 caracteres que pueden ser numeros o simbolos hare lo siguiente:
-    public boolean validarContrasenia() {
+    public boolean validarContrasenia(String contrasena) {
+        if (contrasena.length() < 10) {
+            return false; // La contraseña no tiene más de 10 caracteres
+        }
     	int contadorMayusculas = 0;
     	int contadorDeSimbolosNumeros =0;
     	
