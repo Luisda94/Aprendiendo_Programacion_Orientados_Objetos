@@ -25,7 +25,7 @@ public class RegistroUsuarios {
 
                 // Validar si la contraseña es débil
                 if (contrasena.length() < 10) {
-                    System.out.println("La contraseña es débil. Debe tener más de 10 caracteres. Inténtalo de nuevo.");
+                    System.out.println("La contraseña es débil. Debe tener más de 10 caracteres. \n Inténtalo de nuevo.");
                 } else {
                     break; // Salir del ciclo si la contraseña es válida
                 }
